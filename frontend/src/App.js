@@ -13,7 +13,7 @@ function App() {
     try {
       const response = await fetch(`http://20.2.90.168:8080/api/name/${id}`);
       const data = await response.text();
-      setName(data); // Use the string directly
+      setName(data); 
       console.log(data);
     } catch {
       setName('❌ Could not fetch name');
