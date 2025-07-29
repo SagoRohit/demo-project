@@ -3,6 +3,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin
+
 public class PersonController {
     private final PersonRepository repo;
     public PersonController(PersonRepository repo) { this.repo = repo; }

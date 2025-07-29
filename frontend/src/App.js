@@ -10,9 +10,10 @@ function App() {
     setLoading(true);
     setName('');
     try {
-      const response = await fetch(`/api/name/${id}`);
+      const response = await fetch(`http://localhost:8080/api/name/${id}`);
       const data = await response.text();
-      setName(data);
+      setName(data); // Use the string directly
+      console.log(data);
     } catch {
       setName('❌ Could not fetch name');
     } finally {
