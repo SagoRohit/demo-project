@@ -8,11 +8,17 @@ services:
       - MYSQL_USER=root
       - MYSQL_PASSWORD=sagor1234
     ports:
-      - "3307:3307"
+      - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
       - bizbooker-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-psagor1234"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
     restart: unless-stopped
 
   backend:
@@ -46,7 +52,7 @@ services:
       target: development
     container_name: demo-frontend
     ports:
-      - "3001:3001"
+      - "300:300"
     environment:
       - REACT_APP_API_URL=http://localhost:8080
       - NODE_ENV=production
