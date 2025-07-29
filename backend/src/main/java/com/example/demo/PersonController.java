@@ -3,7 +3,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin("http://20.2.90.168:3000")
+@CrossOrigin(origins = "http://20.2.90.168:3000")
 
 public class PersonController {
     private final PersonRepository repo;
