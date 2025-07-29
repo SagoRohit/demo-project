@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
   const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
+  const [check,setCheck]=useState('');
 
   const handleFetch = async () => {
     setLoading(true);
@@ -20,6 +21,26 @@ function App() {
       setLoading(false);
     }
   };
+
+   const handleCheck = async () => {
+    setLoading(true);
+    setName('');
+    try {
+      const response = await fetch(`http://20.2.90.168:8080/api/hey`);
+      const data = await response.text();
+      setCheck(data);// Use the string directly
+      console.log(data);
+    } catch {
+      setName('❌ Could not fetch name');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    handleCheck();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div>
@@ -43,6 +64,12 @@ function App() {
             <span style={{ fontWeight: "bold" }}>Name:</span> {name}
           </div>
         )}
+      </div>
+      <div>
+        <h1>
+          {check}
+          
+        </h1>
       </div>
     </div>
   );

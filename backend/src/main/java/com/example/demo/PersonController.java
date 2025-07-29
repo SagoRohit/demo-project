@@ -15,4 +15,9 @@ public class PersonController {
             .map(Person::getName)
             .orElse("Not found");
     }
+
+    @GetMapping("/hey")
+    public String check(){
+        return "hello";
+    }
 }
