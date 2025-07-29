@@ -1,0 +1,77 @@
+/* App.css */
+body {
+  background: linear-gradient(120deg, #c2e9fb 0%, #fcb69f 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.center-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  max-width: 380px;
+  margin: 60px auto;
+  padding: 2.5rem 2rem;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 12px 0 0 12px;
+  border: 1px solid #b6c9e2;
+  outline: none;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  border-color: #69a2ff;
+}
+
+button {
+  background: linear-gradient(90deg, #69a2ff 0%, #917cff 100%);
+  color: white;
+  border: none;
+  padding: 0 1.4rem;
+  border-radius: 0 12px 12px 0;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #4173db 0%, #5942db 100%);
+  transform: scale(1.05);
+}
+
+.result-box {
+  background: #eaf2fb;
+  color: #1a237e;
+  margin-top: 1.4rem;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(120,140,170,0.08);
+}
+
+.title {
+  color: #4c5ca6;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
