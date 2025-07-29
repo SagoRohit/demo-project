@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     try {
       const response = await fetch(`http://20.2.90.168:8080/api/name/${id}`);
       const data = await response.text();
-      setName(data); 
+      setName(data); // Use the string directly
       console.log(data);
     } catch {
       setName('❌ Could not fetch name');
@@ -36,11 +36,6 @@ function App() {
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    handleCheck();
-    // eslint-disable-next-line
-  }, []);
 
   return (
     <div>
@@ -65,12 +60,7 @@ function App() {
           </div>
         )}
       </div>
-      <div>
-        <h1>
-          {check}
-          
-        </h1>
-      </div>
+      
     </div>
   );
 }
