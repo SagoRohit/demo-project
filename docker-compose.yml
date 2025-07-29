@@ -6,7 +6,7 @@ services:
       - MYSQL_ROOT_PASSWORD=Sagor1234
       - MYSQL_DATABASE=sagor
       - MYSQL_USER=sagor1
-      - MYSQL_PASSWORD=Sagor1234
+      - MYSQL_PASSWORD=Sagors1234
     ports:
       - "3306:3306"
     volumes:
