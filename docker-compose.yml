@@ -5,7 +5,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=Sagor1234
       - MYSQL_DATABASE=sagor
-      - MYSQL_USER=root
+      - MYSQL_USER=sagor1
       - MYSQL_PASSWORD=Sagor1234
     ports:
       - "3306:3306"
