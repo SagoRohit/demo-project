@@ -1,2 +1,2 @@
-INSERT INTO person (id, name) VALUES (3, 'Alice');
-INSERT INTO person (id, name) VALUES (4, 'Bob');
+INSERT INTO person (id, name) VALUES (5, 'Alice');
+INSERT INTO person (id, name) VALUES (6, 'Bob');
